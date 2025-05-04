@@ -31,7 +31,7 @@ st.markdown("Upload a video and run inference in real-time!")
 # Sidebar Settings
 st.sidebar.header("⚙️ Settings")
 confidence_threshold = st.sidebar.slider("Confidence Threshold", 0.0, 1.0, 0.5, 0.01)
-use_webcam = st.sidebar.checkbox("Use Webcam")
+
 
 model = 'last.pt'
 
@@ -47,11 +47,8 @@ model = load_model(model)
 
 # Process Video Function
 def process_video(video_path):
-    if use_webcam:
-        cap = cv2.VideoCapture(0)  # Webcam
-    else:
-        cap = cv2.VideoCapture(video_path)
-    
+   
+    cap = cv2.VideoCapture(0)  # Webcam
     
     if not cap.isOpened():
         st.error("Error opening video file!")
