@@ -1,3 +1,7 @@
-ultralytics
 python-multipart
 opencv-python-headless==4.5.5.64  # Known stable version
+opencv-python-headless==4.5.5.64
+ultralytics==8.1.0
+streamlit
+numpy
+pillow
