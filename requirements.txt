@@ -5,3 +5,4 @@ ultralytics==8.1.0
 streamlit
 numpy
 pillow
+cloudpickle
